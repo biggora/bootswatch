@@ -1,4 +1,4 @@
-// Flatly 3.3.7
+// Aware 3.3.7
 // Variables
 // --------------------------------------------------
 
@@ -9,16 +9,16 @@
 
 @gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              #7b8a8b;   // #333
-@gray:                   #95a5a6; // #555
-@gray-light:             #b4bcc2;   // #999
+@gray-dark:              #585959;  // #333
+@gray:                   lighten(@gray-dark, 25%); // #555
+@gray-light:             lighten(@gray-dark, 50%);  // #999
 @gray-lighter:           #ecf0f1; // #eee
 
-@brand-primary:         #2C3E50;
-@brand-success:         #18BC9C;
+@brand-primary:         @gray-dark;
+@brand-success:         #0B8F95;
 @brand-info:            #3498DB;
 @brand-warning:         #F39C12;
-@brand-danger:          #E74C3C;
+@brand-danger:          #CB3837;
 
 
 //== Scaffolding
@@ -26,7 +26,7 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               #F2F1F1;
 //** Global text color on `<body>`.
 @text-color:            @brand-primary;
 
@@ -42,7 +42,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -102,9 +102,9 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        2px;
+@border-radius-large:       3px;
+@border-radius-small:       2px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -144,27 +144,27 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #fff;
-@btn-default-bg:                 @gray;
-@btn-default-border:             @btn-default-bg;
+@btn-default-color:              @text-color;
+@btn-default-bg:                 #fff;
+@btn-default-border:             rgba(0, 0, 0, 0.1);
 
-@btn-primary-color:              @btn-default-color;
+@btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
 @btn-primary-border:             @btn-primary-bg;
 
-@btn-success-color:              @btn-default-color;
+@btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
 @btn-success-border:             @btn-success-bg;
 
-@btn-info-color:                 @btn-default-color;
+@btn-info-color:                 #fff;
 @btn-info-bg:                    @brand-info;
 @btn-info-border:                @btn-info-bg;
 
-@btn-warning-color:              @btn-default-color;
+@btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
 @btn-warning-border:             @btn-warning-bg;
 
-@btn-danger-color:               @btn-default-color;
+@btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              @btn-danger-bg;
 
@@ -219,7 +219,7 @@
 @legend-border-color:            transparent;
 
 //** Background color for textual input addons
-@input-group-addon-bg:           @gray-lighter;
+@input-group-addon-bg:           @gray-light;
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
 
@@ -365,12 +365,12 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             #fff;
-@navbar-default-bg:                @brand-primary;
+@navbar-default-bg:                @gray-dark;
 @navbar-default-border:            transparent;
 
 // Navbar links
 @navbar-default-link-color:                #fff;
-@navbar-default-link-hover-color:          @brand-success;
+@navbar-default-link-hover-color:          @gray-lighter;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         #fff;
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 10%);
@@ -387,7 +387,6 @@
 @navbar-default-toggle-icon-bar-bg:        #fff;
 @navbar-default-toggle-border-color:       darken(@navbar-default-bg, 10%);
 
-
 //=== Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      #fff;
@@ -396,7 +395,7 @@
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 #fff;
-@navbar-inverse-link-hover-color:           @brand-primary;
+@navbar-inverse-link-hover-color:           lighten(@brand-success, 25%);
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          #fff;
 @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 5%);
@@ -485,8 +484,8 @@
 //##
 
 @jumbotron-padding:              30px;
-@jumbotron-color:                inherit;
-@jumbotron-bg:                   @gray-lighter;
+@jumbotron-color:                #fff;
+@jumbotron-bg:                   @gray-dark;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 @jumbotron-heading-font-size:    ceil((@font-size-base * 4.5));
@@ -710,11 +709,11 @@
 
 //** Border color for elements within panels
 @panel-inner-border:          @gray-lighter;
-@panel-footer-bg:             @gray-lighter;
+@panel-footer-bg:             @gray-light;
 
 @panel-default-text:          @text-color;
 @panel-default-border:        @gray-lighter;
-@panel-default-heading-bg:    @gray-lighter;
+@panel-default-heading-bg:    @gray-light;
 
 @panel-primary-text:          #fff;
 @panel-primary-border:        @brand-primary;
@@ -760,8 +759,8 @@
 //
 //##
 
-@well-bg:                     @gray-lighter;
-@well-border:                 transparent;
+@well-bg:                     #fff;
+@well-border:                 darken(@well-bg, 7%);
 
 
 //== Badges
