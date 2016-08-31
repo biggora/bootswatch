@@ -119,7 +119,7 @@
       }
       })
     })
-  })
+  });
 
 // Modified from the original jsonpi https://github.com/benvinegar/jquery-jsonpi
 $.ajaxTransport('jsonpi', function(opts, originalOptions, jqXHR) {
