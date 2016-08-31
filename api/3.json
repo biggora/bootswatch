@@ -2,6 +2,19 @@
   "version": "3.3.6",
   "themes": [
     {
+      "name": "Aware",
+      "description": "Cool and awesome",
+      "thumbnail": "https://bootswatch.com/aware/thumbnail.png",
+      "preview": "https://bootswatch.com/aware/",
+      "css": "https://bootswatch.com/aware/bootstrap.css",
+      "cssMin": "https://bootswatch.com/aware/bootstrap.min.css",
+      "cssCdn": "https://maxcdn.bootstrapcdn.com/bootswatch/latest/aware/bootstrap.min.css",
+      "less": "https://bootswatch.com/aware/bootswatch.less",
+      "lessVariables": "https://bootswatch.com/aware/variables.less",
+      "scss": "https://bootswatch.com/aware/_bootswatch.scss",
+      "scssVariables": "https://bootswatch.com/aware/_variables.scss"
+    },
+    {
       "name": "Cerulean",
       "description": "A calm blue sky",
       "thumbnail": "https://bootswatch.com/cerulean/thumbnail.png",
